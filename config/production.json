@@ -1,6 +1,0 @@
-{
-  "mongoURI": "mongodb+srv://yardeng:yarden1234@devconnector.hesrj.mongodb.net/test?retryWrites=true&w=majority",
-  "jwtSecret": "mysecrettoken",
-  "githubClientId": "443c92f440d2e2e4b21c",
-  "githubSecret": "1a121304dfa75b28c7b7dd1863bc49cb0a61449a"
-}
