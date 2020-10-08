@@ -1,10 +1,9 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import Momment from 'react-moment';
 import { deleteComment } from '../../actions/post';
-import { profile_url } from 'gravatar';
 
 const CommentItem = ({
   postId,

@@ -10,7 +10,7 @@ import {
 } from '../actions/types';
 
 const initialState = {
-  post: [],
+  posts: [],
   post: null,
   loading: true,
   error: {},
