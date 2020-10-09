@@ -1,8 +1,8 @@
-import React, { Fragment, useState } from 'react'
-import { Link, withRouter } from 'react-router-dom'
-import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
-import { createProfile } from '../../actions/profile'
+import React, { Fragment, useState } from 'react';
+import { Link, withRouter } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { createProfile } from '../../actions/profile';
 
 const CreateProfile = ({ createProfile, history }) => {
   const [formData, setFormData] = useState({
@@ -18,9 +18,9 @@ const CreateProfile = ({ createProfile, history }) => {
     linkedin: '',
     youtube: '',
     instagram: '',
-  })
+  });
 
-  const [displaySocialInputs, toggleSocialInputs] = useState(false)
+  const [displaySocialInputs, toggleSocialInputs] = useState(false);
 
   const {
     company,
@@ -35,15 +35,16 @@ const CreateProfile = ({ createProfile, history }) => {
     linkedin,
     youtube,
     instagram,
-  } = formData
+  } = formData;
 
   const onChange = (e) =>
-    setFormData({ ...formData, [e.target.name]: e.target.value })
+    setFormData({ ...formData, [e.target.name]: e.target.value });
 
   const onSubmit = (e) => {
-    e.preventDefault()
-    createProfile(formData, history)
-  }
+    e.preventDefault();
+    createProfile(formData, history);
+    window.scrollTo(0, 0);
+  };
 
   return (
     <Fragment>
@@ -217,11 +218,11 @@ const CreateProfile = ({ createProfile, history }) => {
         </Link>
       </form>
     </Fragment>
-  )
-}
+  );
+};
 
 CreateProfile.propTypes = {
   createProfile: PropTypes.func.isRequired,
-}
+};
 
-export default connect(null, { createProfile })(withRouter(CreateProfile))
+export default connect(null, { createProfile })(withRouter(CreateProfile));
