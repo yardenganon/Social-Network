@@ -43,7 +43,7 @@ const EditProfile = ({
       twitter: loading || !profile.social ? '' : profile.social.twitter,
       facebook: loading || !profile.social ? '' : profile.social.facebook,
       linkedin: loading || !profile.social ? '' : profile.social.linkedin,
-      youtube: loading || !profile.youtube ? '' : profile.social.youtube,
+      youtube: loading || !profile.social ? '' : profile.social.youtube,
       instagram: loading || !profile.social ? '' : profile.social.instagram,
     });
   }, [loading, getCurrentProfile]);
@@ -69,6 +69,7 @@ const EditProfile = ({
   const onSubmit = (e) => {
     e.preventDefault();
     createProfile(formData, history, true);
+    window.scrollTo(0, 0);
   };
 
   return (
